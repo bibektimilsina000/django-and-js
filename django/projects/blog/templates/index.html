@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<div class="container">
+
+    {% for post in posts %}
+    <div class="row">
+        <div class="col s12 m8">
+
+            <ul>
+                <h1>
+                    <li>{{post.post_id | safe}}</li>
+                </h1>
+                <h1>
+                    <li>{{post.title | safe}}</li>
+                </h1>
+                <p>
+                    <li>{{post.content |truncatewords:60| safe}}</li>
+                </p>
+            </ul>
+
+            <div class="">
+                <a href="blog/{{post.post_id}}" class="btn bg-primary">Read More</a>
+            </div>
+
+        </div>
+        <div class="col s12 s4 responsive-img">
+            <img src="/media/{{post.image}}" alt="image">
+
+
+
+
+
+            
+
+
+        </div>
+
+
+
+    </div>
+    {% endfor %}
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

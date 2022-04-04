@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+
+<h1>Songs</h1>
+{% for album in albums %}
+
+<img src= "{% static 'duck.jpg' %}" alt="">
+
+<p><a href="">{{album.album_title}}</a></p>
+
+
+
+{% endfor %} 
+
+
+{% endblock content %}
